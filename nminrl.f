@@ -302,7 +302,7 @@
         wdn = 0.   
 	  if (i_sep(j) /= k .or. isep_opt(j) /= 1) then
 	    if (sut >= sdnco(j)) then
-	      wdn = sol_no3(k,j) * (1. - Exp(-cdn(j) * cdg * sol_cbn(k,j)))
+	      wdn = sol_no3(k,j) *(1. -Exp(-cdn(j) *cdg *sol_cbn(k,j)))
 	    else
 	      wdn = 0.
 	    endif

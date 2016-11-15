@@ -91,14 +91,14 @@
             if (dtp_flowrate(i,k)<=0.0) then 
                 dtp_flowrate(i,k) = 0.5 * 1000.0 * dtp_pcpret(i,k) 
      &            * subdr_km(i) / (idt*60.)
-	      end if
+          end if
 
-	      if (dtp_flowrate(i,k)<0) then
-	         print *,"Error.. Could not estimate emergency spillway volume"
-               print *,"Please enter necessary data in *.pnd input file"
-               print *,"for subbasin : ",i
-   !!            stop
-	      end if
+          if (dtp_flowrate(i,k)<0) then
+          print *,"Error: Could not estimate emergency spillway volume"
+              print *,"Please enter necessary data in *.pnd input file"
+              print *,"for subbasin : ",i
+!!            stop
+          end if
          end do
 
          !!	Separate cumulative flow information to individual weir 
